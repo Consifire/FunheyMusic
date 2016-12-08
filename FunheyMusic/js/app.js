@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded',function(){
 							headers:{//不要写错单词！
 								apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 							},
-							dataType:'jsonp',
+							dataType:'json',
 							data:{
 								s:key_word,//必填关键词
 								size:10,
@@ -471,7 +471,7 @@ document.addEventListener('DOMContentLoaded',function(){
 						headers:{//不要写错单词！
 							apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 						},
-						dataType:'jsonp',
+						dataType:'json',
 						data:{hash:hash},
 						success:function(res){
 							
@@ -484,7 +484,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:singer_name
 								},
@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:current_name,
 									hash:hash,
@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded',function(){
 						headers:{//不要写错单词！
 							apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 						},
-						dataType:'jsonp',
+						dataType:'json',
 						data:{hash:hash},
 						success:function(res){
 							
@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:singer_name
 								},
@@ -578,7 +578,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:current_name,
 									hash:hash,
