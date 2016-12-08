@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="user-scalable=no,  maximum-scale=1, minimum-scale=1, width=device-width" />
+		<title>音乐播放器</title>
+		<script src="js/jquery-1.12.0.js"></script>
+		<script type="text/javascript" src="zepto/zepto.js" ></script>
+		<script type="text/javascript" src="swiper/swiper-3.4.0.min.js" ></script>
+		<link rel="stylesheet" href="swiper/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" href="font/iconfont.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/app.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded',function(){
+				
+			});
+		</script>
+	</head>
+	<body>
+		
+		
+		<div class="player">
+			<header>
+				<div class="test">
+					<input type="text" placeholder="歌手、歌曲、专辑" id="searchIn"/><span class="iconfont icon-search" id="search_song"></span>
+					
+				</div>
+				<div class="play-main">
+					<div>
+						<span class="portrait">
+							<img src="http://img1.music.response.itmf.cn/uploadpic/pass/softhead/400/20160418/20160418100516109.jpg" id="singer_img">						
+						</span>
+					</div>	
+					<div>
+						<span class="iconfont icon-previous" id="btnPrev"></span>
+						<span class="iconfont icon-play" id="btnPlay"></span>
+						<span class="iconfont icon-next" id="btnNext"></span>
+						<span class="iconfont icon-audio" id="btnVolume"></span>
+					</div>	
+				</div>
+				<section class="controls">
+					<h1 class="title">陈奕迅-十年</h1>
+					<div class="play-status">
+						<progress max="100" value="0"></progress>
+						<time class="left">-00:16</time>
+					</div>
+					<div class="play-model">
+						<span class="iconfont icon-random" data-model="4" title="随机播放"></span>
+						<span class="iconfont icon-list" data-model="2" title="列表播放"></span>
+						<span class="iconfont icon-list-loop" data-model="3" title="列表循环"></span>
+						<span class="iconfont icon-loop" data-model="1" title="单曲循环"></span>
+						<span class="iconfont icon-like" title="我喜欢的"></span>
+					</div>
+				</section>
+			</header>
+			<div class="tab">
+				<span id="btn1" class="btn_add">歌曲列表</span>
+				<span id="btn2">歌词</span>
+				<span id="btn3">我喜欢</span>
+			</div>
+			<div id="main_tab" class="swiper-container">
+				<div class="swiper-wrapper">
+					<section class="list swiper-slide">aa
+					</section>
+					<section class="krc swiper-slide"><p>暂无歌词</p>	
+					</section>
+					<section class="love_list swiper-slide">
+						<ol class="love_list_list" type="1" start="1"></ol>
+					</section>
+				</div>	
+			</div>	
+			<!--<div class="swiper-container">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">slider1</div>
+			    <div class="swiper-slide">slider2</div>
+			    <div class="swiper-slide">slider3</div>
+			  </div>
+			</div>-->
+		</div>
+	</body>
+</html>
