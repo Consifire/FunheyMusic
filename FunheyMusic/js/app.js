@@ -34,17 +34,18 @@
 document.addEventListener('DOMContentLoaded',function(){
 	//tab三页面切换...高亮显示当前页按钮
 	//console.log($('.swiper-slide').height());
-	var mySwiper = new Swiper('.swiper-container',{
-		speed:100
-	});
-	$('.tab span').click(function(){			
-		$(this).addClass('btn_add').siblings().removeClass('btn_add');
-		mySwiper.slideTo($(this).index(), 100, false);//切换到第一个slide，速度为0.1秒
-	});
-	window.addEventListener('touchend',function(){
-		var swiperIdx=mySwiper.activeIndex;//当前活动块的索引
-		$('.tab span').eq(swiperIdx).addClass('btn_add').siblings().removeClass('btn_add');
-	});
+				var mySwiper = new Swiper('.swiper-container',{
+					speed:100
+				});
+				$('.tab span').click(function(){
+					
+					$(this).addClass('btn_add').siblings().removeClass('btn_add');
+					mySwiper.slideTo($(this).index(), 100, false);//切换到第一个slide，速度为0.1秒
+				});
+				window.addEventListener('touchend',function(){
+					var swiperIdx=mySwiper.activeIndex;//当前活动块的索引
+					$('.tab span').eq(swiperIdx).addClass('btn_add').siblings().removeClass('btn_add');
+				});
 	// 获取页面元素
 	var ePlayer = document.querySelector('.player');
 	ePlayer.style.height=window.innerHeight +'px';
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded',function(){
 				var song_name='陈奕迅 - 十年 - 钢琴版';
 				//歌曲长度
 				var song_time=196;
+				
 				var url;
 			*/	
 	// 全局变量
@@ -99,6 +101,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	var index = 0;
 	var model = 2;//0:单曲播放,1:单曲循环,2:列表播放,3:列表循环,4:随机播放
 	var player = new Audio();
+
 	// 1）ajax加载数据,并写入.list
 			//封装搜索函数
 			function search(){
@@ -108,12 +111,13 @@ document.addEventListener('DOMContentLoaded',function(){
 						
 						//console.log(key_word)
 						$.ajax({
-							type:"get",							
+							type:"get",
+							
 							url:url,
 							headers:{//不要写错单词！
 								apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 							},
-							dataType:'jsonp',
+							dataType:'json',
 							data:{
 								s:key_word,//必填关键词
 								size:10,
@@ -146,7 +150,8 @@ document.addEventListener('DOMContentLoaded',function(){
 										singername:item.singername
 									}
 									//将对象存入空数组
-									playlist.push(obj);									
+									playlist.push(obj);
+									
 								});
 								console.log(playlist);
 								/*playlist.forEach(function(item){
@@ -164,7 +169,8 @@ document.addEventListener('DOMContentLoaded',function(){
 											//播放地址存进数组
 											playsrc.push(krc.data.url);
 											//console.log(playsrc)
-										}										
+										}
+										
 									});	
 									//储存歌手图片``````````````````````````````````````
 									url=xx_url;
@@ -466,7 +472,7 @@ document.addEventListener('DOMContentLoaded',function(){
 						headers:{//不要写错单词！
 							apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 						},
-						dataType:'jsonp',
+						dataType:'json',
 						data:{hash:hash},
 						success:function(res){
 							
@@ -479,7 +485,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:singer_name
 								},
@@ -497,7 +503,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:current_name,
 									hash:hash,
@@ -542,7 +548,7 @@ document.addEventListener('DOMContentLoaded',function(){
 						headers:{//不要写错单词！
 							apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 						},
-						dataType:'jsonp',
+						dataType:'json',
 						data:{hash:hash},
 						success:function(res){
 							
@@ -555,7 +561,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:singer_name
 								},
@@ -573,7 +579,7 @@ document.addEventListener('DOMContentLoaded',function(){
 								headers:{//不要写错单词！
 									apikey:'a0de20180bb8e4c9f6b28867a9c414df'
 								},
-								dataType:'jsonp',
+								dataType:'json',
 								data:{
 									name:current_name,
 									hash:hash,
